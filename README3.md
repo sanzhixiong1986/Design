@@ -56,7 +56,7 @@ public class Product implements Beverage {
 
 ```
 
-##### 饮料的分类
+##### 加入产品1
 
 ```java
 package demo2;
@@ -85,7 +85,7 @@ public class Mocha implements Beverage {
 
 ```
 
-##### 继承主题数据结构
+##### 加入产品2
 
 ```java
 package demo2;
@@ -114,7 +114,7 @@ public class Ice implements Beverage{
 
 ```
 
-##### 测试
+##### 测试算出总价格
 
 ```java
 package demo2;

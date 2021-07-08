@@ -5,4 +5,5 @@
 
 ### [第二章 观察者模式](https://github.com/sanzhixiong1986/Design/blob/main/README2.md)
 
-### 第三章 装饰着模式
+### [第三章 装饰着模式](https://github.com/sanzhixiong1986/Design/blob/main/README3.md)
+

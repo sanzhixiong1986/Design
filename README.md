@@ -7,3 +7,5 @@
 
 ### [第三章 装饰着模式](https://github.com/sanzhixiong1986/Design/blob/main/README3.md)
 
+### 第四章 工厂模式
+

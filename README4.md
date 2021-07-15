@@ -92,3 +92,7 @@ public class Main {
 ```
 
 总结：这个简单的工厂模式，实际上就是一个对产品做了一个多态的处理，然后根据不通的品种选择不同的产出披萨。
+
+设计图如下
+
+![](/Users/joy/Documents/GitHub/Design/1.jpg)

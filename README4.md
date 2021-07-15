@@ -95,4 +95,4 @@ public class Main {
 
 设计图如下
 
-![](/Users/joy/Documents/GitHub/Design/1.jpg)
+![](https://github.com/sanzhixiong1986/Design/blob/main/1.jpg)

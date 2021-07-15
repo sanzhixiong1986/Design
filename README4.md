@@ -96,3 +96,136 @@ public class Main {
 设计图如下
 
 ![](https://github.com/sanzhixiong1986/Design/blob/main/1.jpg)
+
+------
+
+##### 对披萨店的扩展，增加加盟店
+
+```java
+package factoryDemo.demo2;
+
+/**
+ * @author joy zhou
+ * @date 2021/7/16
+ */
+public interface IPizzeStore {
+    public IPizze sellPizze(String type);
+}
+```
+
+##### 产品接口披萨
+
+```java
+package factoryDemo.demo2;
+
+/**
+ * @author joy zhou
+ * @date 2021/7/16
+ */
+public interface IPizze {
+    public void makePizze();
+}
+```
+
+##### 然后我开了两个店一个是意大利的披萨店，一个是当地的披萨店
+
+```java
+package factoryDemo.demo2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author joy
+ * @date 2021/7/16
+ * 意大利披萨店
+ */
+public class ItalianPizze implements IPizzeStore{
+    private static Map<String , IPizze> map = new HashMap<>();
+    static {
+        map.put("cheese",new ItalianCheese());
+    }
+    @Override
+    public IPizze sellPizze(String type) {
+        return map.get(type);
+    }
+}
+```
+
+```java
+package factoryDemo.demo2;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * @author joy
+ * @date 2021/7/16
+ * 美国味披萨店
+ */
+public class UsaPizzeStore implements IPizzeStore{
+    private static Map<String , IPizze> map = new HashMap<>();
+
+    static {
+        map.put("cheese",new UseCheese());
+    }
+
+    @Override
+    public IPizze sellPizze(String type) {
+        return map.get(type);
+    }
+}
+```
+
+##### 售卖的产品
+
+```java
+package factoryDemo.demo2;
+
+/**
+ * @author joy
+ * @date 2021/7/16
+ */
+public class UseCheese implements IPizze{
+    @Override
+    public void makePizze() {
+        System.out.println("美国味的芝士披萨");
+    }
+}
+```
+
+```java
+package factoryDemo.demo2;
+
+/**
+ * @author joy
+ * @date 2021/7/16
+ */
+public class ItalianCheese implements IPizze{
+    @Override
+    public void makePizze() {
+        System.out.printf("意大利味道的芝士披萨");
+    }
+}
+```
+
+##### 测试类
+
+```java
+package factoryDemo.demo2;
+
+/**
+ * @author joy
+ * @date 2021/7/16
+ */
+public class demo2 {
+    public static void main(String[] args) {
+        IPizzeStore iPizzeStore1 = new ItalianPizze();
+        IPizzeStore iPizzeStore2 = new UsaPizzeStore();
+        iPizzeStore1.sellPizze("cheese").makePizze();
+        iPizzeStore2.sellPizze("cheese").makePizze();
+    }
+}
+
+```
+

@@ -9,3 +9,4 @@
 
 ### [第四章 工厂模式](https://github.com/sanzhixiong1986/Design/blob/main/README4.md)
 
+### [第五章 单利模式](https://github.com/sanzhixiong1986/Design/blob/main/README5.md)

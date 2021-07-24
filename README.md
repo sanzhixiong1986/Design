@@ -11,4 +11,4 @@
 
 ### [第五章 单利模式](https://github.com/sanzhixiong1986/Design/blob/main/README5.md)
 
-### 第六章 命令模式
+### [第六章 命令模式](https://github.com/sanzhixiong1986/Design/blob/main/README6.md)

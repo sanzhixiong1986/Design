@@ -72,18 +72,27 @@ public class AppleSoymilk extends SoymilkMachine{
 3.测试
 
 ```java
-public class LightOffCommand implements Command{
-  Light light;
-  public LightOffCommand(Light light){
-    this.light = light;
-  }
-  public void execute(){
-    this.light.off();
-  }
-  
-  public void undo(){
-    this.light.on();
-  }
+package com.company;
+
+/**
+ * @author joy
+ * @date 2021/7/29
+ */
+public class demo {
+    public static void main(String[] args) {
+        System.out.println("测试");
+        SoymilkMachine soymilkMachine = new AppleSoymilk();
+        soymilkMachine.makeSoymilk();
+    }
 }
+```
+
+```
+测试结果
+测试
+放入豆浆
+放入苹果
+搅拌
+完成
 ```
 
